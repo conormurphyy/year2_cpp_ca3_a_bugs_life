@@ -4,6 +4,10 @@
 
 #include "Crawler.h"
 
+#include <iostream>
+
+using namespace std;
+
 void Crawler::move() {
     while (isWayBlocked()) {
         direction++;

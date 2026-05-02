@@ -4,6 +4,46 @@
 
 #include "Hopper.h"
 
+Hopper::Hopper(int id, pair<int,int> position, int direction, int health, int hopLength) : Bug() {
+    this->id = id;
+    this->position = position;
+    this->health = health;
+    this->hopLength = hopLength;
+}
+
 void Hopper::move() {
+    while (isWayBlocked()) {
+        direction++;
+        if (direction > 4) {
+            direction = 1;
+        }
+    }
+
+    for (int i = 0; i < hopLength; i++) {
+        if (isWayBlocked()) {
+            break;
+        }
+
+        if (direction == 1) {
+            position.second = position.second - 1;
+        }
+        else if (direction == 2) {
+            position.first = position.first + 1;
+        }
+        else if (direction == 3) {
+            position.second = position.second + 1;
+        }
+        else if (direction == 4) {
+            position.first = position.first - 1;
+        }
+        else {
+            cout << "Error" << endl;
+        }
+
+        path.push_back(position);
+    }
+
+
+
 
 }
