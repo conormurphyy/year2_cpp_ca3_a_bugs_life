@@ -3,3 +3,7 @@
 //
 
 #include "Hopper.h"
+
+void Hopper::move() {
+
+}

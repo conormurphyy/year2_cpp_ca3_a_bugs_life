@@ -5,8 +5,15 @@
 #ifndef A_BUGS_LIFE_HOPPER_H
 #define A_BUGS_LIFE_HOPPER_H
 
+#include "Bug.h"
 
-class Hopper {
+class Hopper : public Bug {
+protected:
+    int hopLength;
+public:
+    Hopper(int id, pair<int,int> position, int direction, int health, int hopLength);
+
+    void move() override;
 };
 
 
