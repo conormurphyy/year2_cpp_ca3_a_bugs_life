@@ -20,13 +20,10 @@ protected:
     list<pair<int, int>> path;
 
 public:
-    Bug(int id, pair<int, int> position, int direction, int health) {
-        this->id = id;
-        this->position = position;
-        this->direction = direction;
-        this->health = health;
-    }
+    Bug(int id, pair<int, int> position, int direction, int health);
 
+    virtual void move() = 0;
+    bool isWayBlocked();
 };
 
 

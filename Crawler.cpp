@@ -3,3 +3,9 @@
 //
 
 #include "Crawler.h"
+
+void Crawler::move() {
+    while (isWayBLocked()) {
+        //logic here
+    }
+}
