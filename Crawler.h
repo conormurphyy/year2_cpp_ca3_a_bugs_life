@@ -11,7 +11,7 @@ class Crawler : public Bug {
 public:
     Crawler(int id, pair<int, int> position, int direction, int health);
 
-    bool isWayBLocked();
+    bool isWayBlocked();
 
     void move() override;
 

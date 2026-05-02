@@ -5,16 +5,16 @@
 #include "Bug.h"
 
 bool Bug::isWayBlocked() {
-    if (direction == 1 && position.first == 0) {
+    if (direction == 1 && position.second == 0) {
         return true;
     }
-    if (direction == 2 && position.second == 9) {
+    if (direction == 2 && position.first == 9) {
         return true;
     }
-    if (direction == 3 && position.first == 0) {
+    if (direction == 3 && position.second == 0) {
         return true;
     }
-    if (direction == 4 && position.second == 9) {
+    if (direction == 4 && position.first == 9) {
         return true;
     }
     return false;
