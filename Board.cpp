@@ -20,10 +20,10 @@ Board::Board(int width, int height) {
 
 void Board::loadBugs() {
     ifstream fin("bugs.txt");
-    if (fin) {
-        string line;
+    string line;
+    while (getline(fin,line)) {
         std::stringstream test(line);
-        std:string semicolon;
+        std::string semicolon;
         std::vector<std::string> bugList;
         /*https://stackoverflow.com/questions/10058606/splitting-a-string-by-a-character */
         while (std::getline(test, semicolon, ';')) {
@@ -53,9 +53,6 @@ void Board::loadBugs() {
             cout << "Error finding bug type" << endl;
         }
 
-    }
-    else {
-        cout << "No file found" << endl;
     }
 }
 
