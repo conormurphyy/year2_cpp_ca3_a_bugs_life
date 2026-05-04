@@ -8,6 +8,10 @@
 
 using namespace std;
 
+Crawler::Crawler(int id, pair<int, int> position, int direction, int health) : Bug(id,position,direction,health) {
+
+}
+
 void Crawler::move() {
     while (isWayBlocked()) {
         direction++;

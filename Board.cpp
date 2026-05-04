@@ -13,6 +13,10 @@
 using namespace std;
 
 #include <fstream>
+Board::Board(int width, int height) {
+    this->width = width;
+    this->height = height;
+}
 
 void Board::loadBugs() {
     ifstream fin("bugs.txt");
@@ -52,5 +56,11 @@ void Board::loadBugs() {
     }
     else {
         cout << "No file found" << endl;
+    }
+}
+
+Board::~Board() {
+    for (int i = 0; i < bugs.size(); i++) {
+        delete this->bugs[i];
     }
 }

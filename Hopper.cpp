@@ -4,10 +4,7 @@
 
 #include "Hopper.h"
 
-Hopper::Hopper(int id, pair<int,int> position, int direction, int health, int hopLength) : Bug() {
-    this->id = id;
-    this->position = position;
-    this->health = health;
+Hopper::Hopper(int id, pair<int,int> position, int direction, int health, int hopLength) : Bug(id,position,direction,health) {
     this->hopLength = hopLength;
 }
 

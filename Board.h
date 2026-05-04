@@ -17,7 +17,7 @@ public:
     Board(int width, int height);
     ~Board();
 
-    static void loadBugs();
+    void loadBugs();
     void displayAllBugs();
     void GetBugByID(int id);
     void displayHistoryOfAllBugs();
