@@ -63,7 +63,7 @@ void Board::displayAllBugs() {
         cout << bugs[i]->getPosition().first << " ";
         cout << bugs[i]->getPosition().second << " ";
         cout << bugs[i]->getHealth() << " ";
-        
+
     }
 }
 

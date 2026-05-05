@@ -11,4 +11,6 @@ add_executable(a_bugs_life main.cpp
         Board.cpp
         Board.h
         Crawler.cpp
-        Crawler.h)
+        Crawler.h
+        Backtracker.cpp
+        Backtracker.h)
