@@ -92,7 +92,22 @@ void Board::GetBugByID(int id) {
 }
 
 void Board::displayALlCells() {
+    for (int y = 0; y < 10; y++) {
+        for (int x = 0; x < 10; x++) {
+            cout << "(" << x << "," << y << ")";
 
+            for (int i = 0; i < bugs.size(); i++) {
+                if (bugs[i]->getPosition().first == x && bugs[i]->getPosition().second == y) {
+                    cout << bugs[i]->getId() << " ";
+                    cout << bugs[i]->getType() << " ";
+
+                }
+                else {
+                    cout << "Empty" << endl;
+                }
+            }
+        }
+    }
 }
 
 Board::~Board() {

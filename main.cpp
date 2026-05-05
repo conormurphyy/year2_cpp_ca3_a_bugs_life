@@ -20,6 +20,8 @@ int main() {
             cout << "Enter ID to get a bug by it's ID" << " ";
             cin >> id;
             board.GetBugByID(id);
+        case 3:
+            board.displayALlCells();
         default:
             cout << "Invalid choice" << " ";
 
@@ -29,6 +31,7 @@ int main() {
 void mainMenu() {
     cout << "Enter 1 to display all bugs" << " ";
     cout << "Enter 2 to get a bug by it's ID" << " ";
+    cout << "Enter 3 to display all cells" << " ";
 
 
 }
