@@ -7,6 +7,8 @@ void mainMenu();
 int main() {
     Board board(10,10);
     board.loadBugs();
+    while (true) {
+
 
     mainMenu();
 
@@ -15,16 +17,25 @@ int main() {
     switch (choice) {
         case 1:
             board.displayAllBugs();
+            break;
         case 2:
             int id;
             cout << "Enter ID to get a bug by it's ID" << " ";
             cin >> id;
             board.GetBugByID(id);
+            break;
         case 3:
             board.displayAllCells();
+            break;
+        case 4:
+            board.tap();
+            break;
+        case 0:
+            exit(0);
         default:
             cout << "Invalid choice" << " ";
-
+            break;
+    }
     }
 }
 
@@ -32,6 +43,7 @@ void mainMenu() {
     cout << "Enter 1 to display all bugs" << " ";
     cout << "Enter 2 to get a bug by it's ID" << " ";
     cout << "Enter 3 to display all cells" << " ";
-
+    cout << "Enter 4 to tap a bug" << " ";
+    cout << "Enter 0 to exit" << " ";
 
 }
