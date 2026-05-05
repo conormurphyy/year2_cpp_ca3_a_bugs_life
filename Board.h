@@ -21,7 +21,11 @@ public:
     void displayAllBugs();
     void GetBugByID(int id);
 
+    void displayAllCells();
+
     void displayALlCells();
+
+    void tap();
 
     void displayHistoryOfAllBugs();
 };

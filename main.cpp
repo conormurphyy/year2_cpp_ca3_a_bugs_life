@@ -21,7 +21,7 @@ int main() {
             cin >> id;
             board.GetBugByID(id);
         case 3:
-            board.displayALlCells();
+            board.displayAllCells();
         default:
             cout << "Invalid choice" << " ";
 

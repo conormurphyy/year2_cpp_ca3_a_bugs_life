@@ -91,22 +91,31 @@ void Board::GetBugByID(int id) {
 
 }
 
-void Board::displayALlCells() {
+void Board::displayAllCells() {
     for (int y = 0; y < 10; y++) {
         for (int x = 0; x < 10; x++) {
             cout << "(" << x << "," << y << ")";
 
+            bool foundBug = false;
             for (int i = 0; i < bugs.size(); i++) {
                 if (bugs[i]->getPosition().first == x && bugs[i]->getPosition().second == y) {
                     cout << bugs[i]->getId() << " ";
                     cout << bugs[i]->getType() << " ";
+                    foundBug = true;
+                }
 
-                }
-                else {
-                    cout << "Empty" << endl;
-                }
+
+            }
+            if (!foundBug) {
+                cout << "Empty" << endl;
             }
         }
+    }
+}
+
+void Board::tap() {
+    for (int i = 0; i < bugs.size(); i++) {
+        bugs[i]->move();
     }
 }
 
