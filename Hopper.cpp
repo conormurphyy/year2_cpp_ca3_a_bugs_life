@@ -8,6 +8,14 @@ Hopper::Hopper(int id, pair<int,int> position, int direction, int health, int ho
     this->hopLength = hopLength;
 }
 
+
+
+string Hopper::getType() const {
+    return "Hopper";
+}
+
+
+
 void Hopper::move() {
     while (isWayBlocked()) {
         direction++;

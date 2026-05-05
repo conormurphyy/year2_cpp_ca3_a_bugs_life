@@ -59,10 +59,11 @@ void Board::loadBugs() {
 void Board::displayAllBugs() {
     for (int i = 0; i < bugs.size(); i++) {
         cout << bugs[i]->getId() << " ";
+        cout << bugs[i]->getType() << " ";
         cout << bugs[i]->getPosition().first << " ";
         cout << bugs[i]->getPosition().second << " ";
         cout << bugs[i]->getHealth() << " ";
-        cout << endl;
+        
     }
 }
 

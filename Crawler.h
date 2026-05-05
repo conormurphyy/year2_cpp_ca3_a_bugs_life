@@ -12,6 +12,7 @@ public:
     Crawler(int id, pair<int, int> position, int direction, int health);
     void move() override;
 
+    string getType() const override;
 };
 
 

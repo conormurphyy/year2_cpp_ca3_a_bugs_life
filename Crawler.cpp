@@ -12,6 +12,10 @@ Crawler::Crawler(int id, pair<int, int> position, int direction, int health) : B
 
 }
 
+string Crawler::getType() const {
+    return "Crawler";
+}
+
 void Crawler::move() {
     while (isWayBlocked()) {
         direction++;

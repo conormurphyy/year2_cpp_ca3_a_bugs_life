@@ -14,6 +14,10 @@ public:
     Hopper(int id, pair<int,int> position, int direction, int health, int hopLength);
 
     void move() override;
+
+    string getType() const override;
+
+
 };
 
 

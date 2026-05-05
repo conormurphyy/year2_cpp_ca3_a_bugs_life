@@ -25,7 +25,11 @@ public:
     virtual void move() = 0;
     bool isWayBlocked();
 
+
     //Getters
+    virtual string getType() const = 0;
+    virtual int getHopLength() const = 0;
+
     int getId() const;
     pair<int, int> getPosition() const;
     int getDirection() const;
