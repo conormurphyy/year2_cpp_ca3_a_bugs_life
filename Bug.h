@@ -24,6 +24,20 @@ public:
 
     virtual void move() = 0;
     bool isWayBlocked();
+
+    //Getters
+    int getId() const;
+    pair<int, int> getPosition() const;
+    int getDirection() const;
+    int getHealth() const;
+
+    //Setters
+    void setId(int id);
+    void setPosition(pair<int, int> position);
+    void setDirection(int direction);
+    void setHealth(int health);
+
+
 };
 
 

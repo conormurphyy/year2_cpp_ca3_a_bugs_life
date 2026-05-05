@@ -12,6 +12,39 @@ Bug::Bug(int id, pair<int,int> position, int direction, int health) {
     alive = true;
 }
 
+//Getters
+int Bug::getId() const {
+    return id;
+}
+
+pair<int,int> Bug::getPosition() const {
+    return position;
+}
+
+int Bug::getDirection() const {
+    return direction;
+}
+
+int Bug::getHealth() const {
+    return health;
+}
+//Setters
+void Bug::setHealth(int health) {
+    this->health = health;
+}
+
+void Bug::setPosition(pair<int,int> position) {
+    this->position = position;
+}
+
+void Bug::setDirection(int direction) {
+    this->direction = direction;
+}
+
+void Bug::setId(int id) {
+    this->id = id;
+}
+
 bool Bug::isWayBlocked() {
     if (direction == 1 && position.second == 0) {
         return true;

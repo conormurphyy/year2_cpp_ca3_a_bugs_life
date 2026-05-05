@@ -5,4 +5,5 @@
 int main() {
     Board board(10,10);
     board.loadBugs();
+    board.displayAllBugs();
 }
