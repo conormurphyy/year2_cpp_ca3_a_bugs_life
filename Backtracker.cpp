@@ -10,6 +10,10 @@ Backtracker::Backtracker(int id, pair<int, int> position, int direction, int hea
 
 }
 
+string Backtracker::getType() const {
+    return "Backtracker";
+}
+
 void Backtracker::move() {
     if (isWayBlocked()) {
         if (direction == 1) {

@@ -57,14 +57,42 @@ void Board::loadBugs() {
 }
 
 void Board::displayAllBugs() {
+    cout << "ID:" << "\t\t";
+    cout << "Type:" << "\t\t";
+    cout << "Position:" << "\t\t";
+    cout << "Health:" << "\t\t";
+    cout << "\n" << endl;
     for (int i = 0; i < bugs.size(); i++) {
-        cout << bugs[i]->getId() << " ";
-        cout << bugs[i]->getType() << " ";
-        cout << bugs[i]->getPosition().first << " ";
-        cout << bugs[i]->getPosition().second << " ";
-        cout << bugs[i]->getHealth() << " ";
-
+        cout << bugs[i]->getId() << "\t\t";
+        cout << bugs[i]->getType() << "\t\t";
+        cout << "(" << bugs[i]->getPosition().first << "," << bugs[i]->getPosition().second << ")" << "\t\t\t";
+        cout << bugs[i]->getHealth() << "\t\t";
+        cout << "\n" << endl;
     }
+}
+
+void Board::GetBugByID(int id) {
+    bool found = false;
+    for (int i = 0; i < bugs.size(); i++) {
+        if (bugs[i]->getId() == id) {
+            cout << "Bug with ID" + id << " " << endl;
+            cout << bugs[i]->getId() << " ";
+            cout << bugs[i]->getType() << " ";
+            cout << bugs[i]->getPosition().first << " ";
+            cout << bugs[i]->getPosition().second << " ";
+            cout << bugs[i]->getHealth() << " ";
+            cout << endl;
+            found = true;
+        }
+    }
+    if (found == false) {
+        cout << "Bug with ID" + id << " not found" << endl;
+    }
+
+}
+
+void Board::displayALlCells() {
+
 }
 
 Board::~Board() {

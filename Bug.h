@@ -28,7 +28,9 @@ public:
 
     //Getters
     virtual string getType() const = 0;
-    virtual int getHopLength() const = 0;
+    virtual int getHopLength() const {
+        return -1;
+    };
 
     int getId() const;
     pair<int, int> getPosition() const;

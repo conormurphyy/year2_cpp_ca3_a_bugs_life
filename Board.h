@@ -20,6 +20,9 @@ public:
     void loadBugs();
     void displayAllBugs();
     void GetBugByID(int id);
+
+    void displayALlCells();
+
     void displayHistoryOfAllBugs();
 };
 
