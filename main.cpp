@@ -29,6 +29,7 @@ int main() {
             break;
         case 4:
             board.tap();
+            cout << "Bugs have been tapped" << "\n";
             break;
         case 0:
             exit(0);
@@ -40,10 +41,10 @@ int main() {
 }
 
 void mainMenu() {
-    cout << "Enter 1 to display all bugs" << " ";
-    cout << "Enter 2 to get a bug by it's ID" << " ";
-    cout << "Enter 3 to display all cells" << " ";
-    cout << "Enter 4 to tap a bug" << " ";
-    cout << "Enter 0 to exit" << " ";
+    cout << "Enter 1 to display all bugs" << "\n";
+    cout << "Enter 2 to get a bug by it's ID" << "\n";
+    cout << "Enter 3 to display all cells" << "\n";
+    cout << "Enter 4 to tap a bug" << "\n";
+    cout << "Enter 0 to exit" << "\n";
 
 }
