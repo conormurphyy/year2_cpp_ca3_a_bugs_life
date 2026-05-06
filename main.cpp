@@ -51,6 +51,7 @@ void mainMenu() {
     cout << "Enter 3 to display all cells" << "\n";
     cout << "Enter 4 to tap a bug" << "\n";
     cout << "Enter 5 to see the life history of bugs" << "\n";
+    cout << "Enter 6 to run a simulation" << "\n";
     cout << "Enter 0 to exit" << "\n";
 
 }
