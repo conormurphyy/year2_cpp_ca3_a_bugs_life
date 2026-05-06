@@ -9,7 +9,7 @@
 using namespace std;
 
 Crawler::Crawler(int id, pair<int, int> position, int direction, int health) : Bug(id,position,direction,health) {
-
+    path.push_back(position);
 }
 
 string Crawler::getType() const {

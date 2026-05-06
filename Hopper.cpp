@@ -6,6 +6,7 @@
 
 Hopper::Hopper(int id, pair<int,int> position, int direction, int health, int hopLength) : Bug(id,position,direction,health) {
     this->hopLength = hopLength;
+    path.push_back(position);
 }
 
 string Hopper::getType() const {

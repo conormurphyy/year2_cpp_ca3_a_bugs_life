@@ -32,6 +32,8 @@ public:
         return -1;
     };
 
+    const list<pair<int, int>>& getPath() const { return path; }
+
     int getId() const;
     pair<int, int> getPosition() const;
     int getDirection() const;

@@ -31,6 +31,9 @@ int main() {
             board.tap();
             cout << "Bugs have been tapped" << "\n";
             break;
+        case 5:
+            board.displayHistoryOfAllBugs();
+            break;
         case 0:
             exit(0);
         default:
@@ -45,6 +48,7 @@ void mainMenu() {
     cout << "Enter 2 to get a bug by it's ID" << "\n";
     cout << "Enter 3 to display all cells" << "\n";
     cout << "Enter 4 to tap a bug" << "\n";
+    cout << "Enter 5 to see the life history of bugs" << "\n";
     cout << "Enter 0 to exit" << "\n";
 
 }

@@ -120,6 +120,18 @@ void Board::tap() {
     }
 }
 
+void Board::displayHistoryOfAllBugs() {
+    for (int i = 0; i < bugs.size(); i++) {
+        cout << bugs[i]->getId() << " ";
+        cout << bugs[i]->getType() << " ";
+        cout << "Path: ";
+        for (auto it = bugs[i]->getPath().begin(); it != bugs[i]->getPath().end(); it++) {
+            cout << "(" << it->first << ", " << it->second << ")" << " ";
+        }
+        cout << endl;
+    }
+}
+
 Board::~Board() {
     for (int i = 0; i < bugs.size(); i++) {
         delete this->bugs[i];
