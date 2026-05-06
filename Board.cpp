@@ -222,7 +222,7 @@ void Board:: checkIfTwoBugsAreInSamePosition()
     {
         if (bugs[i]->isAlive())
         {
-            for (int j = 0; j < bugs.size(); j++)
+            for (int j = i+1; j < bugs.size(); j++)
             {
                 if (bugs[j]->isAlive())
                 {
