@@ -167,6 +167,7 @@ void Board::runSimulation()
     int tapCount=0;
     cout << "Simulation started" << endl;
     int aliveBugs=0;
+
     for (int i = 0; i < bugs.size(); i++)
     {
         if (bugs[i]-> isAlive())
@@ -174,6 +175,7 @@ void Board::runSimulation()
             aliveBugs++;
         }
     }
+
     while (aliveBugs>1)
     {
         tapCount++;
@@ -201,17 +203,18 @@ void Board::runSimulation()
                 << bugs[i]->getPosition().second
                 << bugs[i]->getHealth() << endl;
             }
-        }
-        for (int i = 0; i < bugs.size(); i++)
-        {
-            if (bugs[i]-> isAlive())
-            {
-                cout<< "game over"<< endl;
-                cout<< "last bug = " << bugs[i]->getId() <<endl;
 
-            }
         }
         writeLifeHistoryToFile();
+
+    }
+    cout << "game over" << endl;
+    for (int i =0; i<bugs.size();i++)
+    {
+        if (bugs[i]-> isAlive())
+        {
+            cout << "Last bug = " << bugs[i]->getId() << endl;
+        }
     }
 
 
@@ -230,7 +233,7 @@ void Board:: checkIfTwoBugsAreInSamePosition()
                     {
                         cout << bugs[i]->getId() << endl;
                         cout << " is fighting" << endl;
-                        cout << bugs[j] << endl;
+                        cout << bugs[j] ->getId()<< endl;
 
                         for (int r = 1; r<= 3; r++)
                         {
@@ -238,8 +241,8 @@ void Board:: checkIfTwoBugsAreInSamePosition()
                             {
                                 break;
                             }
-                            int b1Damage = rand() &6; //random num generator taken from https://www.w3schools.com/cpp/cpp_howto_random_number.asp
-                            int b2Damage = rand() &6;
+                            int b1Damage = rand() %6; //random num generator taken from https://www.w3schools.com/cpp/cpp_howto_random_number.asp
+                            int b2Damage = rand() %6;
 
                             bugs[i]->setHealth(bugs[i]->getHealth() - b1Damage);
                             bugs[j]->setHealth(bugs[j]->getHealth() - b2Damage);
