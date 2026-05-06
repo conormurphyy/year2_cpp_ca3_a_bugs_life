@@ -32,6 +32,10 @@ int Bug::getHealth() const {
 void Bug::setHealth(int health) {
     this->health = health;
 }
+void Bug::setAlive(bool alive)
+{
+    this -> alive = alive;
+}
 
 void Bug::setPosition(pair<int,int> position) {
     this->position = position;

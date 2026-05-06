@@ -30,6 +30,7 @@ public:
     void displayHistoryOfAllBugs();
     void runSimulation();
     void writeLifeHistoryToFile();
+    void checkIfTwoBugsAreInSamePosition();
 };
 
 

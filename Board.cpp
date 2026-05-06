@@ -7,7 +7,7 @@
 #include "Bug.h"
 #include <iostream>
 #include <sstream>
-
+#include <cstdlib>
 #include "Backtracker.h"
 #include "Crawler.h"
 #include "Hopper.h"
@@ -17,6 +17,7 @@ using namespace std;
 Board::Board(int width, int height) {
     this->width = width;
     this->height = height;
+
 }
 
 void Board::loadBugs() {
@@ -209,6 +210,38 @@ void Board::runSimulation()
 
 
 }
+void Board:: checkIfTwoBugsAreInSamePosition()
+{
+    for (int i = 0; i < bugs.size(); i++)
+    {
+        if (bugs[i]->isAlive())
+        {
+            for (int j = 0; j < bugs.size(); j++)
+            {
+                if (bugs[j]->isAlive())
+                {
+                    if (bugs[i]->getPosition() == bugs[j]->getPosition())
+                    {
+                        cout << bugs[i]->getId() << endl;
+                        cout << " is fighting" << endl;
+                        cout << bugs[j] << endl;
+
+                        for (int r = 1; r<= 3; r++)
+                        {
+                            if (!bugs[i]->isAlive() || !bugs[j]->isAlive())
+                            {
+                                break;
+                            }
+                            int b1Damage = rand() &6; //random num generator taken from https://www.w3schools.com/cpp/cpp_howto_random_number.asp
+                            int b2Damage = rand() &6;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 Board::~Board() {
     for (int i = 0; i < bugs.size(); i++) {

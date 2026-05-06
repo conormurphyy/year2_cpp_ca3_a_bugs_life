@@ -44,6 +44,7 @@ public:
     void setPosition(pair<int, int> position);
     void setDirection(int direction);
     void setHealth(int health);
+    void setAlive(bool alive);
 
     bool isAlive(){return alive;}
 
