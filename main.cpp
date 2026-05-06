@@ -36,6 +36,7 @@ int main() {
             break;
         case 6:
             board.runSimulation();
+            break;
         case 0:
             exit(0);
         default:

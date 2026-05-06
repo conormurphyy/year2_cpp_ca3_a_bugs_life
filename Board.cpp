@@ -169,6 +169,15 @@ void Board::runSimulation()
 
         tap();
 
+        aliveBugs=0;
+        for (int i = 0; i < bugs.size(); i++)
+        {
+            if (bugs[i]-> isAlive())
+            {
+                aliveBugs++;
+            }
+        }
+
         cout << "Alive bugs: " << aliveBugs << endl;
 
         for (int i=0;i<bugs.size();i++)
