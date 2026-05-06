@@ -129,7 +129,7 @@ void Board::tap() {
         }
         
     }
-    
+    checkIfTwoBugsAreInSamePosition();
 }
 
 void Board::displayHistoryOfAllBugs() {
