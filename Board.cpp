@@ -122,8 +122,14 @@ void Board::displayAllCells() {
 
 void Board::tap() {
     for (int i = 0; i < bugs.size(); i++) {
+        if (bugs[i]-> isAlive())
+        {
         bugs[i]->move();
+            
+        }
+        
     }
+    
 }
 
 void Board::displayHistoryOfAllBugs() {
@@ -234,7 +240,27 @@ void Board:: checkIfTwoBugsAreInSamePosition()
                             }
                             int b1Damage = rand() &6; //random num generator taken from https://www.w3schools.com/cpp/cpp_howto_random_number.asp
                             int b2Damage = rand() &6;
+
+                            bugs[i]->setHealth(bugs[i]->getHealth() - b1Damage);
+                            bugs[j]->setHealth(bugs[j]->getHealth() - b2Damage);
+
+                            cout << "round :" << r << endl;
+                            cout << "bug" << bugs[i]->getId() << " takes " << b1Damage << " damage" << endl;
+                            cout << "bug" << bugs[j]->getId() << " takes" << b2Damage << " damage" << endl;
+
+                            if (bugs[i]->getHealth() <=0)
+                            {
+                                bugs[i]-> setAlive(false);
+                                cout << "bug " << bugs[i]->getId() << "died" << endl;
+                            }
+                            if (bugs[j]->getHealth() <=0)
+                            {
+                                bugs[j]-> setAlive(false);
+                                cout << "bug " << bugs[j]->getId() << "died" << endl;
+                            }
+
                         }
+                        break;
                     }
                 }
             }
