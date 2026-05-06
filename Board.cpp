@@ -11,7 +11,7 @@
 #include "Crawler.h"
 #include "Hopper.h"
 using namespace std;
-
+#include <string>
 #include <fstream>
 Board::Board(int width, int height) {
     this->width = width;
@@ -130,6 +130,25 @@ void Board::displayHistoryOfAllBugs() {
         }
         cout << endl;
     }
+}
+
+void Board::writeLifeHistoryToFile()
+{
+    ofstream fout("lifeHistory.txt");
+    string output;
+    for (int i =0;i<bugs.size();i++)
+    {
+        string output = to_string(bugs[i]->getId()) + ";" + bugs[i]->getType() + ";" + to_string(bugs[i]->getHealth()) + "\n";
+        string pathS = "";
+        for (auto it = bugs[i]->getPath().begin(); it != bugs[i]->getPath().end(); it++) {
+            pathS += "(" + to_string(it->first) + "," + to_string(it->second) + ")";
+        }
+        output += pathS;
+       }
+    fout << output;
+    fout.close();
+
+
 }
 
 Board::~Board() {
