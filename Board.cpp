@@ -154,14 +154,46 @@ void Board::runSimulation()
 {
     int tapCount=0;
     cout << "Simulation started" << endl;
-    int aliveBugs;
+    int aliveBugs=0;
     for (int i = 0; i < bugs.size(); i++)
     {
         if (bugs[i]-> isAlive())
         {
-
+            aliveBugs++;
         }
     }
+    while (aliveBugs>1)
+    {
+        tapCount++;
+        cout << "Tap count: " << tapCount << endl;
+
+        tap();
+
+        cout << "Alive bugs: " << aliveBugs << endl;
+
+        for (int i=0;i<bugs.size();i++)
+        {
+            if (bugs[i]->isAlive())
+            {
+                cout << bugs[i]->getId()<< bugs[i]->getType()
+                << bugs[i]->getPosition().first
+                << bugs[i]->getPosition().second
+                << bugs[i]->getHealth() << endl;
+            }
+        }
+        for (int i = 0; i < bugs.size(); i++)
+        {
+            if (bugs[i]-> isAlive())
+            {
+                cout<< "game over"<< endl;
+                cout<< "last bug = " << bugs[i]->getId() <<endl;
+
+            }
+        }
+        writeLifeHistoryToFile();
+    }
+
+
 }
 
 Board::~Board() {
