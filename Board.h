@@ -28,6 +28,7 @@ public:
     void tap();
 
     void displayHistoryOfAllBugs();
+    void runSimulation();
     void writeLifeHistoryToFile();
 };
 

@@ -34,6 +34,8 @@ int main() {
         case 5:
             board.displayHistoryOfAllBugs();
             break;
+        case 6:
+            board.runSimulation();
         case 0:
             exit(0);
         default:
