@@ -150,6 +150,19 @@ void Board::writeLifeHistoryToFile()
 
 
 }
+void Board::runSimulation()
+{
+    int tapCount=0;
+    cout << "Simulation started" << endl;
+    int aliveBugs;
+    for (int i = 0; i < bugs.size(); i++)
+    {
+        if (bugs[i]-> isAlive())
+        {
+
+        }
+    }
+}
 
 Board::~Board() {
     for (int i = 0; i < bugs.size(); i++) {

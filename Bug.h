@@ -45,6 +45,8 @@ public:
     void setDirection(int direction);
     void setHealth(int health);
 
+    bool isAlive(){return alive;}
+
 
 };
 
