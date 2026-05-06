@@ -198,17 +198,19 @@ void Board::runSimulation()
         {
             if (bugs[i]->isAlive())
             {
-                cout << bugs[i]->getId()<< bugs[i]->getType()
-                << bugs[i]->getPosition().first
-                << bugs[i]->getPosition().second
-                << bugs[i]->getHealth() << endl;
+                cout << "Bug " << bugs[i]->getId()
+                    << " | " << bugs[i]->getType()
+                    << " | Position: (" << bugs[i]->getPosition().first
+                    << "," << bugs[i]->getPosition().second << ")"
+                    << " | Health: " << bugs[i]->getHealth()
+                    << endl;
             }
 
         }
         writeLifeHistoryToFile();
 
     }
-    cout << "game over" << endl;
+    cout << "GAME OVER" << endl;
     for (int i =0; i<bugs.size();i++)
     {
         if (bugs[i]-> isAlive())
@@ -232,7 +234,7 @@ void Board:: checkIfTwoBugsAreInSamePosition()
                     if (bugs[i]->getPosition() == bugs[j]->getPosition())
                     {
                         cout << bugs[i]->getId() << endl;
-                        cout << " is fighting" << endl;
+                        cout << "Is fighting " << endl;
                         cout << bugs[j] ->getId()<< endl;
 
                         for (int r = 1; r<= 3; r++)
@@ -247,19 +249,19 @@ void Board:: checkIfTwoBugsAreInSamePosition()
                             bugs[i]->setHealth(bugs[i]->getHealth() - b1Damage);
                             bugs[j]->setHealth(bugs[j]->getHealth() - b2Damage);
 
-                            cout << "round :" << r << endl;
-                            cout << "bug" << bugs[i]->getId() << " takes " << b1Damage << " damage" << endl;
-                            cout << "bug" << bugs[j]->getId() << " takes" << b2Damage << " damage" << endl;
+                            cout << "Round : " << r << endl;
+                            cout << "Bug : " << bugs[i]->getId() << " takes " << b1Damage << " damage" << endl;
+                            cout << "Bug : " << bugs[j]->getId() << " takes" << b2Damage << " damage" << endl;
 
                             if (bugs[i]->getHealth() <=0)
                             {
                                 bugs[i]-> setAlive(false);
-                                cout << "bug " << bugs[i]->getId() << "died" << endl;
+                                cout << "Bug:  " << bugs[i]->getId() << "died" << endl;
                             }
                             if (bugs[j]->getHealth() <=0)
                             {
                                 bugs[j]-> setAlive(false);
-                                cout << "bug " << bugs[j]->getId() << "died" << endl;
+                                cout << "Bug : " << bugs[j]->getId() << "died" << endl;
                             }
 
                         }
