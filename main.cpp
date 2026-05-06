@@ -59,6 +59,7 @@ void mainMenu() {
     cout << "6. Run a simulation" << "\n";
     cout << "0. Exit" << "\n";
     cout << "===========================================" << endl;
-    cout << "Enter Your Choice Below";
+    cout << "Enter Your Choice Below" << endl;
+
 
 }
