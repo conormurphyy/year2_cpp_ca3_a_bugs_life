@@ -107,9 +107,10 @@ void Board::displayAllCells() {
 
             }
             if (!foundBug) {
-                cout << "Empty" << endl;
+                cout << "Empty" << " ";
             }
         }
+        cout << endl;
     }
 }
 
