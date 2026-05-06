@@ -8,6 +8,7 @@
 #include <iostream>
 #include <sstream>
 
+#include "Backtracker.h"
 #include "Crawler.h"
 #include "Hopper.h"
 using namespace std;
@@ -48,6 +49,10 @@ void Board::loadBugs() {
             pair<int, int> position = {x,y};
             int hopLength = std::stoi(bugList[6]);
             bugs.push_back(new Hopper(id, position, direction, health, hopLength));
+        }
+        else if (type == "B") {
+            pair<int, int> position = {x,y};
+            bugs.push_back(new Backtracker (id, position, direction, health));
         }
         else {
             cout << "Error finding bug type" << endl;
