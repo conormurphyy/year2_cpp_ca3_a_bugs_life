@@ -47,12 +47,18 @@ int main() {
 }
 
 void mainMenu() {
-    cout << "Enter 1 to display all bugs" << "\n";
-    cout << "Enter 2 to get a bug by it's ID" << "\n";
-    cout << "Enter 3 to display all cells" << "\n";
-    cout << "Enter 4 to tap a bug" << "\n";
-    cout << "Enter 5 to see the life history of bugs" << "\n";
-    cout << "Enter 6 to run a simulation" << "\n";
-    cout << "Enter 0 to exit" << "\n";
+    cout << "\n";
+    cout << "===========================================" << endl;
+    cout << "          A Bugs Life Menu" << endl;
+    cout << "===========================================" << endl;
+    cout << "1. Display all bugs" << "\n";
+    cout << "2. Get a bug by it's ID" << "\n";
+    cout << "3. Display all cells" << "\n";
+    cout << "4. Tap a bug" << "\n";
+    cout << "5. See the life history of bugs" << "\n";
+    cout << "6. Run a simulation" << "\n";
+    cout << "0. Exit" << "\n";
+    cout << "===========================================" << endl;
+    cout << "Enter Your Choice Below";
 
 }
