@@ -23,8 +23,6 @@ public:
 
     void displayAllCells();
 
-    void displayALlCells();
-
     void tap();
 
     void displayHistoryOfAllBugs();

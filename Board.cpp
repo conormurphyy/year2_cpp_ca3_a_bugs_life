@@ -10,6 +10,7 @@
 #include <cstdlib>
 #include "Backtracker.h"
 #include "Crawler.h"
+#include "CrazyBug.h"
 #include "Hopper.h"
 using namespace std;
 #include <string>
@@ -54,6 +55,11 @@ void Board::loadBugs() {
         else if (type == "B") {
             pair<int, int> position = {x,y};
             bugs.push_back(new Backtracker (id, position, direction, health));
+        }
+        else if (type == "Z")
+        {
+            pair<int,int> position ={x,y};
+            bugs.push_back(new CrazyBug(id,position,direction,health));
         }
         else {
             cout << "Error finding bug type" << endl;
