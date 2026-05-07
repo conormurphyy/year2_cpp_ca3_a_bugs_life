@@ -76,7 +76,7 @@ void Board::displayAllBugs() {
     cout << "\n" << endl;
     for (int i = 0; i < bugs.size(); i++) {
         cout << bugs[i]->getId() << "\t\t";
-        cout << bugs[i]->getType() << "\t\t\\t";
+        cout << bugs[i]->getType() << "\t\t\t";
         cout << "(" << bugs[i]->getPosition().first << "," << bugs[i]->getPosition().second << ")" << "\t\t\t";
         cout << bugs[i]->getHealth() << "\t\t";
         cout << "\n" << endl;
