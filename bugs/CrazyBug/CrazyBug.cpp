@@ -4,7 +4,7 @@
 
 #include "CrazyBug.h"
 
-#include "Bug.h"
+#include "../Bug.h"
 #include <cstdlib>
 
 CrazyBug::CrazyBug(int id, pair<int,int> position, int direction,int health): Bug(id,position,direction,health)

@@ -4,14 +4,14 @@
 
 #include "Board.h"
 
-#include "Bug.h"
+#include "../bugs/Bug.h"
 #include <iostream>
 #include <sstream>
 #include <cstdlib>
-#include "Backtracker.h"
-#include "Crawler.h"
-#include "CrazyBug.h"
-#include "Hopper.h"
+#include "../bugs/Backtracker/Backtracker.h"
+#include "../bugs/Crawler/Crawler.h"
+#include "../bugs/CrazyBug/CrazyBug.h"
+#include "../bugs/Hopper/Hopper.h"
 using namespace std;
 #include <string>
 #include <fstream>
