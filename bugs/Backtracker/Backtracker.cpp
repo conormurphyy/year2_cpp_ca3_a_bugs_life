@@ -4,7 +4,7 @@
 
 #include "Backtracker.h"
 
-#include "Bug.h"
+#include "../Bug.h"
 
 Backtracker::Backtracker(int id, pair<int, int> position, int direction, int health) :Bug(id,position,direction,health) {
     path.push_back(position);

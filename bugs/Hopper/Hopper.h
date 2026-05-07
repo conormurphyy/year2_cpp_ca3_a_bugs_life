@@ -5,7 +5,7 @@
 #ifndef A_BUGS_LIFE_HOPPER_H
 #define A_BUGS_LIFE_HOPPER_H
 
-#include "Bug.h"
+#include "../Bug.h"
 
 class Hopper : public Bug {
 protected:

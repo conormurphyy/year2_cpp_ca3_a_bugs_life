@@ -4,7 +4,7 @@
 
 #ifndef A_BUGS_LIFE_CRAZYBUG_H
 #define A_BUGS_LIFE_CRAZYBUG_H
-#include "Bug.h"
+#include "../Bug.h"
 
 
 class CrazyBug: public Bug{
