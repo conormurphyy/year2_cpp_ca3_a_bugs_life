@@ -125,7 +125,7 @@ void Board::tap() {
         if (bugs[i]-> isAlive())
         {
         bugs[i]->move();
-            
+
         }
         
     }

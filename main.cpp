@@ -38,7 +38,11 @@ int main() {
             board.runSimulation();
             break;
         case 0:
+            board.writeLifeHistoryToFile();
+            cout << "Life History has been written to file." << endl;
+            cout<< "Exiting Program" << endl;
             exit(0);
+
         default:
             cout << "Invalid choice" << " ";
             break;
