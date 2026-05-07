@@ -154,19 +154,24 @@ void Board::writeLifeHistoryToFile()
 {
     ofstream fout("lifeHistory.txt");
     string output;
-    for (int i =0;i<bugs.size();i++)
+
+    for (int i = 0; i < bugs.size(); i++)
     {
-        string output = to_string(bugs[i]->getId()) + ";" + bugs[i]->getType() + ";" + to_string(bugs[i]->getHealth()) + "\n";
-        string pathS = "";
+        output += to_string(bugs[i]->getId()) + ";"
+                + bugs[i]->getType() + ";"
+                + to_string(bugs[i]->getHealth()) + "\n";
+
+        string pathS = "Path: ";
+
         for (auto it = bugs[i]->getPath().begin(); it != bugs[i]->getPath().end(); it++) {
-            pathS += "(" + to_string(it->first) + "," + to_string(it->second) + ")";
+            pathS += "(" + to_string(it->first) + "," + to_string(it->second) + ") ";
         }
-        output += pathS;
-       }
+
+        output += pathS + "\n\n";
+    }
+
     fout << output;
     fout.close();
-
-
 }
 void Board::runSimulation()
 {
@@ -182,7 +187,7 @@ void Board::runSimulation()
         }
     }
 
-    while (aliveBugs>1)
+    while (aliveBugs>1 && tapCount <500)
     {
         tapCount++;
         cout << "Tap count: " << tapCount << endl;
@@ -216,13 +221,21 @@ void Board::runSimulation()
         writeLifeHistoryToFile();
 
     }
-    cout << "GAME OVER" << endl;
-    for (int i =0; i<bugs.size();i++)
+    if (aliveBugs==1)
     {
-        if (bugs[i]-> isAlive())
+        cout << "GAME OVER" << endl;
+        for (int i =0; i<bugs.size();i++)
         {
-            cout << "Last bug = " << bugs[i]->getId() << endl;
+            if (bugs[i]-> isAlive())
+            {
+                cout << "Last bug = " << bugs[i]->getId() << endl;
+            }
         }
+    }
+    else
+    {
+        cout << "Simulation stopped after 500 taps" << endl;
+        cout << "there are still" << aliveBugs << "bugs alive" << endl;
     }
 
 
