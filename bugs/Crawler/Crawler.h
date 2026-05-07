@@ -5,7 +5,7 @@
 #ifndef A_BUGS_LIFE_CRAWLER_H
 #define A_BUGS_LIFE_CRAWLER_H
 
-#include "Bug.h"
+#include "../Bug.h"
 
 class Crawler : public Bug {
 public:

@@ -4,7 +4,7 @@
 
 #ifndef A_BUGS_LIFE_BACKTRACKER_H
 #define A_BUGS_LIFE_BACKTRACKER_H
-#include "Bug.h"
+#include "../Bug.h"
 
 //Moves 1 step but when it is blocked it goes in the opposite direction. For example north to south, instead of being random.
 class Backtracker : public Bug {

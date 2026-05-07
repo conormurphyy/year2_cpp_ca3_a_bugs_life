@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "Board.h"
+#include "Board/Board.h"
 // TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 void mainMenu();
 
